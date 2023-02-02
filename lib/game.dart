@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'decoration/torch.dart';
 import 'main.dart';
+import 'npc/wizard_npc.dart';
 
 class Game extends StatefulWidget {
   const Game({super.key});
@@ -70,6 +71,7 @@ class _GameState extends State<Game> implements GameListener {
           forceTileSize: Vector2(tileSize, tileSize),
           objectsBuilder: {
             'torch': (p) => Torch(p.position),
+            'wizard': (p) => WizardNPC(p.position),
           },
         ),
         progress: Container(
