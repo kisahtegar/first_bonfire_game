@@ -5,7 +5,6 @@ import 'package:first_bonfire_game/player/knight.dart';
 import 'package:flutter/material.dart';
 
 import 'decoration/torch.dart';
-import 'enemies/boss.dart';
 import 'main.dart';
 import 'npc/wizard_npc.dart';
 
@@ -73,7 +72,6 @@ class _GameState extends State<Game> implements GameListener {
           objectsBuilder: {
             'torch': (p) => Torch(p.position),
             'wizard': (p) => WizardNPC(p.position),
-            'boss': (p) => Boss(p.position),
           },
         ),
         progress: Container(
